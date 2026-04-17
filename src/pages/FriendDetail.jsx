@@ -76,8 +76,8 @@ export default function FriendDetail() {
                   <span key={tag} className="tag-badge">{tag}</span>
                 ))}
               </div>
+              <p className="text-sm text-gray-500 mb-2">{friend.email}</p>
               <p className="text-sm text-gray-500 italic mb-1">"{friend.bio}"</p>
-              <p className="text-xs text-gray-400">Preferred: <span className="text-gray-600">email</span></p>
             </div>
 
             {/* Action Buttons */}
