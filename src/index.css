@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+  }
+}
+
+@layer components {
+  .status-badge {
+    @apply inline-block px-2 py-0.5 rounded-full text-xs font-semibold text-white;
+  }
+  .status-overdue {
+    @apply bg-red-500;
+  }
+  .status-almost {
+    @apply bg-orange-400;
+  }
+  .status-ontrack {
+    @apply bg-green-500;
+  }
+  .tag-badge {
+    @apply inline-block px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600 uppercase tracking-wide;
+  }
+  .action-btn {
+    @apply w-full flex items-center gap-2 px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 border border-gray-200 rounded-lg transition-colors duration-200;
+  }
+  .stat-card {
+    @apply bg-white rounded-xl border border-gray-200 p-5 flex flex-col items-center justify-center gap-1 shadow-sm;
+  }
+  .friend-card {
+    @apply bg-white rounded-xl border border-gray-200 p-4 cursor-pointer hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col items-center text-center gap-2;
+  }
+  .nav-link {
+    @apply flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200;
+  }
+  .nav-link.active {
+    @apply bg-primary text-white hover:text-white;
+  }
+  .checkin-btn {
+    @apply flex flex-col items-center gap-2 flex-1 py-5 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-sm text-gray-600 font-medium cursor-pointer;
+  }
+}
+
+/* Toast animation */
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+.toast-enter {
+  animation: slideIn 0.3s ease forwards;
+}
+.toast-exit {
+  animation: slideOut 0.3s ease forwards;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #1e4d3a;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
