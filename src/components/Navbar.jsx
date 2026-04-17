@@ -9,10 +9,6 @@ export default function Navbar() {
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
           <img src={logoImg} alt="KeenKeeper" className="h-7 w-auto" />
-          <span className="font-bold text-lg tracking-tight">
-            <span className="text-gray-900">Keen</span>
-            <span className="text-primary">Keeper</span>
-          </span>
         </NavLink>
 
         {/* Navigation Links */}

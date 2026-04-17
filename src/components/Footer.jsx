@@ -1,5 +1,5 @@
 import logoXlImg from '../assets/logo-xl.png';
-import youtubeImg from '../assets/instagram.png';
+import instagramImg from '../assets/instagram.png';
 import facebookImg from '../assets/facebook.png';
 import twitterImg from '../assets/twitter.png';
 
@@ -10,9 +10,6 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-3">
           <img src={logoXlImg} alt="KeenKeeper" className="h-9 w-auto brightness-0 invert" />
-          <span className="text-3xl font-bold tracking-tight">
-            <span className="font-light">Keen</span>Keeper
-          </span>
         </div>
 
         {/* Tagline */}
@@ -24,14 +21,14 @@ export default function Footer() {
         <div className="mb-6">
           <p className="text-sm text-gray-400 mb-3">Social Links</p>
           <div className="flex justify-center gap-3">
-            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200">
-              <img src={youtubeImg} alt="Instagram" className="w-4 h-4 brightness-0 invert" />
+            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200 overflow-hidden">
+              <img src={instagramImg} alt="Instagram" className="w-full h-full object-cover" />
             </a>
-            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200">
-              <img src={facebookImg} alt="Facebook" className="w-4 h-4 brightness-0 invert" />
+            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200 overflow-hidden">
+              <img src={facebookImg} alt="Facebook" className="w-full h-full object-cover" />
             </a>
-            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200">
-              <img src={twitterImg} alt="Twitter" className="w-4 h-4 brightness-0 invert" />
+            <a href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200 overflow-hidden">
+              <img src={twitterImg} alt="Twitter" className="w-full h-full object-cover" />
             </a>
           </div>
         </div>
